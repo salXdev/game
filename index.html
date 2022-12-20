@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | GAME</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <title>KTORZE | GAME</title>
+    <link rel="shortcut icon" href="TemplateData/icon.jpg">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600></canvas>
+      <canvas id="unity-canvas" width=1920 height=1080></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div id="unity-mobile-warning">
-        WebGL builds are not supported on mobile devices.
+        Este jogo ainda nao esta disponivel para dispositivos moveis.
       </div>
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
@@ -25,14 +25,13 @@
         <div id="unity-build-title">GAME</div>
       </div>
     </div>
-    <audio autoplay > <source src="game.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio> 
     <script>
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/v 1.0.0.loader.js";
+      var loaderUrl = buildUrl + "/v 1.0.1.loader.js";
       var config = {
-        dataUrl: buildUrl + "/v 1.0.0.data",
-        frameworkUrl: buildUrl + "/v 1.0.0.framework.js",
-        codeUrl: buildUrl + "/v 1.0.0.wasm",
+        dataUrl: buildUrl + "/v 1.0.1.data",
+        frameworkUrl: buildUrl + "/v 1.0.1.framework.js",
+        codeUrl: buildUrl + "/v 1.0.1.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "KTORZE",
         productName: "GAME",
@@ -63,8 +62,8 @@
           mobileWarning.style.display = "none";
         }, 5000);
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        canvas.style.width = "1920px";
+        canvas.style.height = "1080px";
       }
       loadingBar.style.display = "block";
 
@@ -84,5 +83,9 @@
       };
       document.body.appendChild(script);
     </script>
+     <audio controls autoplay>
+      <source src="game.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio> 
   </body>
 </html>
